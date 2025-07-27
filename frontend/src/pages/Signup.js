@@ -5,7 +5,7 @@ export default function SignUp() {
     name: '',
     email: '',
     phone: '',
-    role: 'driver',
+    role: 'guest',
     password: ''
   });
 
@@ -86,19 +86,6 @@ export default function SignUp() {
               required
               placeholder="Enter your phone number"
             />
-          </div>
-          <div className="mb-3">
-            <label className="form-label fw-bold">Role</label>
-            <select
-              className="form-select"
-              name="role"
-              value={form.role}
-              onChange={handleChange}
-              required
-            >
-              <option value="driver">Driver</option>
-              <option value="employee">Employee</option>
-            </select>
           </div>
           <div className="mb-3">
             <label className="form-label fw-bold">Password</label>

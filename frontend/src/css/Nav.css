@@ -1,27 +1,43 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Start items from the left */
   align-items: center;
   background-color: #24292e;
   color: white;
   padding: 0.75rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  height: 70px;
 }
 
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-right: auto; /* Pushes the rest to the right */
+  position: static;
+  left: unset;
 }
 
 .hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  margin-left: 1.5rem;
+  position: static;
+  right: unset;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* Push nav links to the right */
 }
 
 .nav-links a {
@@ -29,9 +45,37 @@
   text-decoration: none;
 }
 
+.ourpolicy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #24292e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1200;
+  }
+    
+
 @media (max-width: 768px) {
+
+  .navbar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1000;
+      height: 70px;
+  }
   .hamburger {
     display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1100;
+    background: none;
+    border: none;
   }
 
   .nav-links {
@@ -41,11 +85,28 @@
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
     padding: 1rem;
   }
 
   .nav-links.open {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #24292e;
+    padding: 2rem 1rem;
+    z-index: 1000;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
   }
+
+  .ourpolicy {
+    position: static;
+    width: 100vw;
+  }
+ 
 }

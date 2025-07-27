@@ -19,16 +19,16 @@ export default function Login() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
       });
+  
       const data = await res.json();
       if (res.ok) {
         setMessage(data.message || 'Login successful!');
+        localStorage.setItem('user', JSON.stringify(data.user));
         localStorage.setItem('token', data.token);
 
         setTimeout(() => {
           if (data.user && data.user.role === 'admin') {
             navigate('/admin-dashboard');
-          } else if (data.user && data.user.role === 'driver') {
-            navigate('/driver-dashboard');
           } else {
             navigate('/user-dashboard');
           }

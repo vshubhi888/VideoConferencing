@@ -25,10 +25,9 @@ export default function Home() {
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col text-center">
+        <div className="col text-center ourpolicy">
           <h3>Why Choose Us?</h3>
           <p>
-            <span role="img" aria-label="clock">⏱️</span> 24/7 Service &nbsp; | &nbsp;
             <span role="img" aria-label="shield">🛡️</span> Safe & Secure &nbsp; | &nbsp;
             <span role="img" aria-label="star">⭐</span> Trusted by 10,000+ users
           </p>
