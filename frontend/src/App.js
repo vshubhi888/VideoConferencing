@@ -9,6 +9,8 @@ import Logout from './pages/Logout';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import UserDashboard from './pages/dashboard/UserDashboard';
+import HostPage from './pages/HostPage';
+import JoinPage from './pages/JoinPage';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/welcome" element={<ProtectedRoute><Welcome /></ProtectedRoute>} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/host" element={<HostPage />} />
+        <Route path="/join" element={<JoinPage />} />
       </Routes>
     </Router>
   );
